@@ -1,4 +1,3 @@
-const gameStatus = 'waitingTurn';
 const playerPanel = document.querySelector('.player-panel');
 const playerScore = document.querySelector('#playerScore');
 const computerScore = document.querySelector('#computerScore');
