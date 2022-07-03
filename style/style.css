@@ -28,6 +28,7 @@ body {
 
 header {
     padding: 10px 0;
+    position: relative;
     margin-bottom: 100px;
 }
 
@@ -72,7 +73,7 @@ header {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .game__result-player {
@@ -90,11 +91,12 @@ header {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
+/* player panel */
 .player-panel {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding: 0 250px;
+    padding: 0 300px;
 }
 
 .player-panel-item {
@@ -102,6 +104,13 @@ header {
     padding: 30px;
     border-radius: 50%;
     transition: .3s ease;
+    background-color: transparent;
+}
+.message{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+    user-select: none;
 }
 
 .player-panel-item:hover {
@@ -130,4 +139,13 @@ header {
 
 .player-panel-item-green {
     border-color: #3cde75;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-weight: 300;
 }
