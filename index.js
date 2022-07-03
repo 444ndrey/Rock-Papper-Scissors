@@ -63,8 +63,8 @@ async function ComputeAndShowResult(playerTurn, computerTurn) {
         }
         playerScore.innerText = score.player;
         computerScore.innerText = score.computer;
-        playerReusltImg.src = `/img/${playerTurn.img}`
-        computerReusltImg.src = `/img/${computerTurn.img}`
+        playerReusltImg.src = `img/${playerTurn.img}`
+        computerReusltImg.src = `img/${computerTurn.img}`
     }, 500);
     setTimeout(() => {
 
