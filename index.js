@@ -73,8 +73,8 @@ async function ComputeAndShowResult(playerTurn, computerTurn) {
 }
 function setupNewTurn() {
     playerPanel.style.display = 'block';
-    playerReusltImg.src = `./img/rock.svg`;
-    computerReusltImg.src = `./img/rock.svg`;
+    playerReusltImg.src = `img/rock.svg`;
+    computerReusltImg.src = `img/rock.svg`;
     computerResult.classList.remove('winner');
     playerResult.classList.remove('winner');
 }
