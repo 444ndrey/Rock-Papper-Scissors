@@ -2,17 +2,20 @@
     "rock":{
         "id": 0,
         "name": "rock",
-        "img": "rock.svg"
+        "img": "rock.svg",
+        "beat": "scissors"
     },
     "papper":{
         "id": 1,
         "name": "papper",
-        "img": "papper.svg"
+        "img": "papper.svg",
+        "beat": "rock"
     },
     "scissors":{
         "id": 2,
         "name": "scissors",
-        "img": "scissors.svg"
+        "img": "scissors.svg",
+        "beat": "papper"
     }
 
 }
