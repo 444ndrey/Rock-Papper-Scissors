@@ -91,12 +91,22 @@ header {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
 
+.winner {
+    -webkit-box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
+    -moz-box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
+    box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
+    background-color: #3f7ad874;
+}
+
 /* player panel */
 .player-panel {
     width: 100%;
+    padding: 0 300px;
+}
+
+.player-panel-items {
     display: flex;
     justify-content: space-around;
-    padding: 0 300px;
 }
 
 .player-panel-item {
@@ -106,7 +116,8 @@ header {
     transition: .3s ease;
     background-color: transparent;
 }
-.message{
+
+.message {
     text-align: center;
     margin-bottom: 20px;
     font-weight: 300;
