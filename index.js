@@ -53,6 +53,8 @@ async function ComputeAndShowResult(playerTurn, computerTurn) {
     }
 
     await setTimeout(() => {
+        playerReusltImg.classList.remove('wating-animation');
+        computerReusltImg.classList.remove('wating-animation');
         if (result == 'win') {
             score.player += 1;
             playerResult.classList.add('winner');
@@ -77,4 +79,6 @@ function setupNewTurn() {
     computerReusltImg.src = `img/rock.svg`;
     computerResult.classList.remove('winner');
     playerResult.classList.remove('winner');
+    playerReusltImg.classList.add('wating-animation');
+    computerReusltImg.classList.add('wating-animation');
 }
