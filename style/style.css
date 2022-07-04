@@ -2,7 +2,7 @@
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
     color: #fff;
-    text-shadow: 2px 2px 7px rgba(255,255,255,0.41);
+    text-shadow: 2px 2px 7px rgba(255, 255, 255, 0.41);
 }
 
 body {
@@ -92,17 +92,19 @@ header {
 }
 
 @keyframes waiting {
-    25%{
+    25% {
         transform: translateY(10px);
     }
-    50%{
+
+    50% {
         transform: translateY(-10px);
     }
-    75%{
+
+    75% {
         transform: translateY(10px);
     }
-    100%{
-    }
+
+    100% {}
 }
 
 .winner {
@@ -114,7 +116,8 @@ header {
     -moz-transition: box-shadow .15s ease-in-out;
     transition: box-shadow .15s ease-in-out;
 }
-#game-result-message{
+
+#game-result-message {
     margin: 0;
     width: 100%;
     text-align: center;
@@ -176,6 +179,32 @@ header {
 
 .player-panel-item-green {
     border-color: #3cde75;
+}
+
+/* HIstory */
+.game-history {
+    width: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+.game-history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.game-history-item>img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.img-loser {
+    opacity: 0.5;
 }
 
 footer {
