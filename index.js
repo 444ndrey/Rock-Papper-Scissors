@@ -5,6 +5,7 @@ const playerReusltImg = document.querySelector('#playerResultImg');
 const computerReusltImg = document.querySelector('#computerResultImg');
 const playerResult = document.querySelector('#playerResult');
 const computerResult = document.querySelector('#computerResult');
+const resultMessage = document.querySelector('#game-result-message');
 
 const score = {
     player: 0,
@@ -45,11 +46,14 @@ async function getElementInfo(name) {
 
 async function ComputeAndShowResult(playerTurn, computerTurn) {
     let result = 'draw';
+    resultMessage.innerText = 'DRAW';
     if (playerTurn.beat == computerTurn.name) {
         result = 'win'
+        resultMessage.innerText = 'YOU WIN';
     }
     if (playerTurn.name == computerTurn.beat) {
         result = 'lose'
+        resultMessage.innerText = 'YOU LOSE';
     }
 
     await setTimeout(() => {
@@ -67,6 +71,7 @@ async function ComputeAndShowResult(playerTurn, computerTurn) {
         computerScore.innerText = score.computer;
         playerReusltImg.src = `img/${playerTurn.img}`
         computerReusltImg.src = `img/${computerTurn.img}`
+        resultMessage.style.opacity = 100;
     }, 500);
     setTimeout(() => {
 
@@ -81,4 +86,5 @@ function setupNewTurn() {
     playerResult.classList.remove('winner');
     playerReusltImg.classList.add('wating-animation');
     computerReusltImg.classList.add('wating-animation');
+    resultMessage.style.opacity = 0;
 }

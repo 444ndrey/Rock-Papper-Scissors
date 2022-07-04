@@ -3,7 +3,6 @@
     font-family: 'Roboto Mono', monospace;
     color: #fff;
     text-shadow: 2px 2px 7px rgba(255,255,255,0.41);
-
 }
 
 body {
@@ -58,7 +57,7 @@ header {
 .game-header {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
 .player {
@@ -104,8 +103,6 @@ header {
     }
     100%{
     }
-
-
 }
 
 .winner {
@@ -113,6 +110,15 @@ header {
     -moz-box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
     box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
     background-color: #3f7ad874;
+}
+#game-result-message{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .1s ease-in-out;
+    -moz-transition: opacity .1s ease-in-out;
+    transition: opacity .1s ease-in-out;
 }
 
 /* player panel */
