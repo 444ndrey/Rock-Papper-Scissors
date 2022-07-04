@@ -110,6 +110,9 @@ header {
     -moz-box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
     box-shadow: 0px 0px 35px 60px rgba(63, 122, 216, 0.33);
     background-color: #3f7ad874;
+    -webkit-transition: box-shadow .15s ease-in-out;
+    -moz-transition: box-shadow .15s ease-in-out;
+    transition: box-shadow .15s ease-in-out;
 }
 #game-result-message{
     margin: 0;
