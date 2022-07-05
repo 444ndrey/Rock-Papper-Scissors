@@ -6,11 +6,12 @@ const computerReusltImg = document.querySelector('#computerResultImg');
 const playerResult = document.querySelector('#playerResult');
 const computerResult = document.querySelector('#computerResult');
 const resultMessage = document.querySelector('#game-result-message');
-const turnsHistory = [];
-const score = {
+let turnsHistory = [];
+let score = {
     player: 0,
     computer: 0
 }
+loadData();
 async function doTurn(playerTurn) {
     playerPanel.style.display = 'none';
     let computerTurn = parseFloat(Math.random() * 2).toFixed();
@@ -80,8 +81,8 @@ async function ComputeAndShowResult(playerTurn, computerTurn) {
         fillHistory();
     }, 500);
     setTimeout(() => {
-
         setupNewTurn();
+        saveData();
     }, 1700)
 }
 function setupNewTurn() {
@@ -93,6 +94,7 @@ function setupNewTurn() {
     playerReusltImg.classList.add('wating-animation');
     computerReusltImg.classList.add('wating-animation');
     resultMessage.style.opacity = 0;
+
 }
 function fillHistory() {
     if (turnsHistory.length >= 7) {
@@ -126,4 +128,27 @@ function fillHistory() {
         turnResult.append(computerTurn);
         gameHistory.append(turnResult);
     });
+}
+function saveData() {
+    localStorage.setItem('history', JSON.stringify(turnsHistory));
+    localStorage.setItem('score', JSON.stringify(score));
+}
+function loadData() {
+    if (localStorage.getItem('history') && localStorage.getItem('score')) {
+        turnsHistory = JSON.parse(localStorage.getItem('history'));
+        score = JSON.parse(localStorage.getItem('score'));
+        fillHistory();
+        playerScore.innerText = score.player;
+        computerScore.innerText = score.computer;
+    }
+}
+function restartGame() {
+    localStorage.clear();
+    turnsHistory = [];
+    fillHistory();
+    score.player = 0;
+    score.computer = 0;
+    playerScore.innerText = score.player;
+    computerScore.innerText = score.computer;
+
 }

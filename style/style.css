@@ -202,6 +202,24 @@ header {
     height: 30px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
+.game-restart{
+    width: 100%;
+    display: flex;
+    padding:  20px 0;
+    justify-content: center;
+}
+.game-restart-btn{
+    background-color: transparent;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+    width: max-content;
+    font-weight: 300;
+    transition: .3s ease-in-out;
+}
+.game-restart-btn:hover{
+    transform: scale(0.95);
+}
 
 .img-loser {
     opacity: 0.5;
