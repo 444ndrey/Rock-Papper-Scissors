@@ -202,13 +202,15 @@ header {
     height: 30px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
-.game-restart{
+
+.game-restart {
     width: 100%;
     display: flex;
-    padding:  20px 0;
+    padding: 20px 0;
     justify-content: center;
 }
-.game-restart-btn{
+
+.game-restart-btn {
     background-color: transparent;
     border: none;
     align-self: center;
@@ -217,7 +219,8 @@ header {
     font-weight: 300;
     transition: .3s ease-in-out;
 }
-.game-restart-btn:hover{
+
+.game-restart-btn:hover {
     transform: scale(0.95);
 }
 
@@ -232,4 +235,128 @@ footer {
     justify-content: center;
     width: 100%;
     font-weight: 300;
+}
+
+/* MEDIA QUERiES */
+@media all and (max-width: 1400px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    .player-panel {
+        width: 100%;
+        padding: 0 150px;
+    }
+}
+
+@media all and (max-width: 1100px) {
+    .container {
+        max-width: 700px;
+    }
+
+    .player-panel {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header-content {
+        gap: 20px;
+    }
+
+    header {
+        margin-bottom: 50px;
+    }
+
+    .game-history {
+        width: 100px;
+        padding: 7px;
+    }
+
+
+}
+
+@media all and (max-width: 500px) {
+    .player-panel {
+        width: 100%;
+        padding: 0;
+    }
+
+    .player-panel-item>img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .game__result-player>img {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .header-content h1 {
+        display: none;
+    }
+
+    .container {
+        max-width: 350px;
+    }
+
+    .game-history {
+        position: relative;
+        width: 100%;
+        padding: 50px;
+    }
+
+
+    .player-panel-item {
+        padding: 20px;
+        border-width: 5px;
+    }
+
+    .game__result-player {
+        padding: 20px;
+        border-width: 6px;
+    }
+
+    h2.message {
+        font-size: 18px;
+    }
+}
+
+/* HEIGHT */
+
+@media (max-height: 1000px) {
+
+    .game-header {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-height: 870px) {
+    header {
+        margin-bottom: 10px;
+    }
+
+    footer {
+        bottom: 0;
+        position: relative;
+    }
+
+    .player-panel-item>img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .game__result-player>img {
+        width: 64px;
+        height: 64px;
+    }
+
+    .player>h2 {
+        font-size: 28px;
+    }
+
+    .message {
+        font-size: 24px;
+    }
 }
