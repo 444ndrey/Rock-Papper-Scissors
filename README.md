@@ -4,6 +4,7 @@ Simple game to play against Computer
 
 No framework only JS/HTML/CSS
 
+### Play here - https://teinaava.github.io/Rock-Papper-Scissors/
 
 ## FAQ
 
